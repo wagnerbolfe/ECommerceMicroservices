@@ -1,3 +1,4 @@
+using Basket.API.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,6 +10,8 @@ builder.Services.AddStackExchangeRedisCache(opt =>
 {
     opt.Configuration = builder.Configuration.GetValue<string>("CacheSettings:ConnectionSettings");
 });
+
+builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
