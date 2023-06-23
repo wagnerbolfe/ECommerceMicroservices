@@ -399,3 +399,8 @@ FodyWeavers.xsd
 
 */appsettings.json
 
+/src/Services/Basket/Basket.API/appsettings.json
+/src/Services/Catalog/Catalog.API/appsettings.json
+/src/Services/Discount/Discount.API/appsettings.json
+/src/Services/Discount/Discount.gRPC/appsettings.json
+/src/Services/Ordering/Ordering.API/appsettings.json
