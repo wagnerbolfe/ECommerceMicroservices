@@ -398,3 +398,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 */appsettings.json
+/src/Services/Basket/Basket.API/appsettings.json
