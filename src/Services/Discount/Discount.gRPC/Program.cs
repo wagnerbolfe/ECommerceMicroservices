@@ -1,3 +1,4 @@
+using System.Net;
 using Discount.gRPC.Extensions;
 using Discount.gRPC.Repositories;
 using Discount.gRPC.Services;
@@ -5,7 +6,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.DependencyInjection;
-using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +15,7 @@ builder.WebHost.UseKestrel(options =>
     options.Listen(IPAddress.Any, 80, opt => opt.Protocols = HttpProtocols.Http2);
     options.Listen(IPAddress.Any, 5003, opt => opt.Protocols = HttpProtocols.Http2);
 });
- 
+
 builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddGrpc();
