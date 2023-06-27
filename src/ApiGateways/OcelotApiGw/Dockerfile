@@ -1,0 +1,20 @@
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-preview AS base
+USER app
+WORKDIR /app
+EXPOSE 8010
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0-preview AS build
+WORKDIR /src
+COPY ["ApiGateways/OcelotApiGw/OcelotApiGw.csproj", "ApiGateways/OcelotApiGw/"]
+RUN dotnet restore "ApiGateways/OcelotApiGw/OcelotApiGw.csproj"
+COPY . .
+WORKDIR "/src/ApiGateways/OcelotApiGw"
+RUN dotnet build "OcelotApiGw.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "OcelotApiGw.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "OcelotApiGw.dll"]

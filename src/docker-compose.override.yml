@@ -124,3 +124,16 @@ services:
     ports:
       - "8004:8004"
 
+  ocelot.api.gw:
+    container_name: ocelot.api.gw
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8010
+    depends_on:
+        - catalog.api
+        - basket.api
+        - discount.api
+        - ordering.api
+    ports:
+      - "8010:8010"
+
