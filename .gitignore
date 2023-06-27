@@ -404,3 +404,4 @@ FodyWeavers.xsd
 /src/Services/Discount/Discount.API/appsettings.json
 /src/Services/Discount/Discount.gRPC/appsettings.json
 /src/Services/Ordering/Ordering.API/appsettings.json
+/src/ApiGateways/OcelotApiGw/appsettings.json
