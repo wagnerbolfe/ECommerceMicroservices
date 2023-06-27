@@ -8,7 +8,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalog.api",
-          "Port": "8000"
+          "Port": "80"
         }
       ],
       "UpstreamPathTemplate": "/Catalog",
@@ -21,7 +21,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalog.api",
-          "Port": "8000"
+          "Port": "80"
         }
       ],
       "UpstreamPathTemplate": "/Catalog/{id}",
@@ -33,7 +33,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "catalog.api",
-          "Port": "8000"
+          "Port": "80"
         }
       ],
       "UpstreamPathTemplate": "/Catalog/GetProductByCategory/{category}",
@@ -46,7 +46,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "basket.api",
-          "Port": "8001"
+          "Port": "80"
         }
       ],
       "UpstreamPathTemplate": "/Basket/{userName}",
@@ -58,7 +58,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "basket.api",
-          "Port": "8001"
+          "Port": "80"
         }
       ],
       "UpstreamPathTemplate": "/Basket",
@@ -70,7 +70,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "basket.api",
-          "Port": "8001"
+          "Port": "80"
         }
       ],
       "UpstreamPathTemplate": "/Basket/Checkout",
@@ -90,7 +90,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "discount.api",
-          "Port": "8002"
+          "Port": "80"
         }
       ],
       "UpstreamPathTemplate": "/Discount/{productName}",
@@ -102,7 +102,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "discount.api",
-          "Port": "8002"
+          "Port": "80"
         }
       ],
       "UpstreamPathTemplate": "/Discount",
@@ -115,7 +115,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "ordering.api",
-          "Port": "8004"
+          "Port": "80"
         }
       ],
       "UpstreamPathTemplate": "/Order/{userName}",
