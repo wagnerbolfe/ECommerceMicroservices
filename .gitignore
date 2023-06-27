@@ -405,3 +405,4 @@ FodyWeavers.xsd
 /src/Services/Discount/Discount.gRPC/appsettings.json
 /src/Services/Ordering/Ordering.API/appsettings.json
 /src/ApiGateways/OcelotApiGw/appsettings.json
+/src/ApiGateways/Shopping.Aggregator/appsettings.json
