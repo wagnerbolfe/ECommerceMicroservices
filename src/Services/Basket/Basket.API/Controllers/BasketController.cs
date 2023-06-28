@@ -8,10 +8,12 @@ using System.Net;
 using System.Threading.Tasks;
 using EventBus.Messages.Events;
 using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Basket.API.Controllers
 {
     [ApiController]
+    [Authorize("ClientIdPolicy")]
     [Route("api/v1/[controller]")]
     public class BasketController : ControllerBase
     {
